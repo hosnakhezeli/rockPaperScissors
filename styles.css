@@ -1,0 +1,173 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c3e50;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+  transition: background-color 2s, color 2s;
+}
+.light-theme {
+  background: #c7ccd1;
+  color: #2c3e50;
+}
+.container {
+  text-align: center;
+  background: #34495e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  min-height: 350px;
+  min-width: 400px;
+  transition: background-color 2s;
+  position: relative;
+}
+.light-theme .container {
+  background: #dbdcdd;
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+.choices {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 32px;
+  cursor: pointer;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+button:active {
+  box-shadow: 0 0 9px 2px #08342b inset;
+}
+.result {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.emoji {
+  font-size: 48px;
+  margin: 10px;
+}
+
+.timer-box {
+  padding-block: 18px;
+  background: #2c3e50;
+  margin: 10px auto;
+  border-radius: 10px;
+  width: 90%;
+  transition: background-color 2s;
+}
+
+.box-result {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-item {
+  background: #2c3e50;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 2s;
+}
+
+.light-theme .result-item, .light-theme .result-item, .light-theme .timer-box, .light-theme #reset-game {
+  background: #c7ccd1;
+}
+.light-theme #reset-game:hover {
+  background: #18c1db;
+}
+#reset-game {
+  background: #ff4500;
+  border-radius: 10px;
+  margin-inline: auto;
+  padding-block: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: background-color 2s;
+}
+#reset-game:hover {
+  background-color: #ff6347;
+}
+
+#time-out {
+  margin-block: 20px;
+  display: block;
+}
+
+#light-mode {
+    content: url(./svg/light.svg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 39px;
+    height: 30px;
+    background: #b8c4cf;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.light-theme #light-mode {
+  content: url(./svg/night.svg);
+  background: #4c4f51;
+}
+
+.set_item {
+  padding: 0px 6px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+#numberInput {
+  width: 80px;
+  height: 29px;
+  font-size: 18px;
+  border-radius: 7px;
+  border: none;
+  padding-inline: 10px;
+  outline: none;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.green_text, .red_text {
+  animation-duration: 2s;
+  animation-name: bounceIn;
+  font-size: 50px !important;
+  position: absolute;
+}
+.green_text {
+  color: green;
+  bottom: 20%;
+  right: 5%;
+}
+.red_text {
+  color: red;
+  bottom: 20%;
+  right: 16%;
+}

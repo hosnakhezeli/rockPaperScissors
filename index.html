@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بازی سنگ، کاغذ، قیچی</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="light-mode">
+    </div>
+    <div class="container">
+      <div>
+        <span>تعداد ست های مورد نظر خود را وارد کنید</span>
+        <form id="numberForm">
+          <input type="number" id="numberInput" placeholder="۰۰۰" >
+          <button class="set_item" type="submit">ثبت</button>
+        </form>
+      </div>
+      <h1>بازی سنگ، کاغذ، قیچی</h1>
+      <div class="box-result">
+        <div class="result-item"> کاربر : <span id="user-result">0</span></div>
+        <div class="result-item"> کامپیوتر : <span id="computer-result">0</span></div>
+      </div>
+      <div class="timer-box"> زمان باقی مانده: <span id="timer">15</span> ثانیه</div>
+      <div class="choices">
+        <button id="rock" class="button-choice">✊</button>
+        <button id="paper" class="button-choice">✋</button>
+        <button id="scissors" class="button-choice">✌️</button>
+      </div>
+      <div class="result">
+        <div id="userChoice" class="emoji"></div>
+        <div id="computerChoice" class="emoji"></div>
+        <p id="resultText"></p>
+      </div>
+      <span id="time-out"></span>
+      <div id="reset-game">بازی از اول</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
